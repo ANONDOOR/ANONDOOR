@@ -55,7 +55,7 @@ def ip():
     if os.path.exists("ngrok"):
         os.system("chmod +x ngrok")
         print("se ha descargado con exito!\nvuelve a entrar")
-        sys.exit())
+        sys.exit()
         
 
 
