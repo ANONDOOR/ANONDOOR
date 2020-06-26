@@ -3,9 +3,10 @@ import time
 import subprocess
 import os
 import sys
+from colorama import Fore
 def ip():
-
-    HOST, PORT = str(input("host: ")), int(input("port: "))
+    
+    HOST, PORT = str(input(Fore.RESET + "host: ")), int(input("port: "))
     listen_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     listen_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     listen_socket.bind((HOST, PORT))
