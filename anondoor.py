@@ -3,7 +3,7 @@ import os
 import time
 import shutil
 import colorsys
-from source import ftp, iplogger
+from source import ftp, iplogger, payload
 from colorama import Fore
 
 
@@ -21,6 +21,8 @@ def help():
         keylogger (crea un keylogger escrito en python)
 
         iplogger (Ejecuta un iplogger escrito en python)
+
+        payload (Crea un payload con msfvenom)
 
         """)
 
@@ -47,12 +49,17 @@ def menu():
         if f == "-h" or f == "--help":
             help()
             sys.exit()
-        if f == "cyberftp":
-            
+        if f == "cyberftp":    
             ft2 = Fore.CYAN + str(ftp.connect_ftp())
             sys.exit()
         if f == "iplogger":
             Fore.RESET + str(iplogger.ip())
+        
+        if f == "payload":
+            host = input("LHOST: ")
+            port = input("LPORT: ")
+            ame = input("NOMBRE: ")
+            Fore.RESET + str(payload.payload(host,port, ame))
 
         if f == "keylogger":
                 if os.path.exists(path="keylogger.py"):
