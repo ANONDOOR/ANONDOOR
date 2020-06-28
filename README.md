@@ -6,3 +6,5 @@ Requerimientos:
 python3, wget.
 
 y si falta algun modulo, puedes instalarlo con pip, o pip3.
+
+para ver el menu de ayuda, escribe -h o --help
