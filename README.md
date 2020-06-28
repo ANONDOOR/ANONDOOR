@@ -35,7 +35,7 @@ Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](.)
 
 ## Autores ✒️
 
-* **Cyber Phantom** - *Ethical Hacker* - [CyberPhantom](.)
+* **Cyber Phantom** - *Ethical Hacker* - [CyberPhantom](https://github.com/CyberPhant0m)
 
 ## Licencia 📄
 
@@ -48,4 +48,4 @@ Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md
 
 
 ---
-⌨️ con mucho gusto por [CyberPhantom](.) 
+⌨️ con mucho gusto por [CyberPhantom](https://github.com/CyberPhant0m) 
