@@ -5,7 +5,7 @@ import shutil
 import colorsys
 from source import ftp, iplogger, payload
 from colorama import Fore
-
+from source import cybersendmail
 
 def help():
         print("""
@@ -23,6 +23,8 @@ def help():
         iplogger (Ejecuta un iplogger escrito en python)
 
         payload (Crea un payload con msfvenom)
+
+        spammail (Usa esto para diversion, herramienta de spmam a Emails)
 
         """)
 
@@ -71,6 +73,14 @@ def menu():
                     shutil.copyfile(src="re242", dst="keylogger.py")
                     print("Keylogger creado satisfactoriamente")
                     sys.exit()
+        if f == "spammail":
+            a = input("Ingresa tu correo: ")
+            b = input("Ingresa tu contraseña: ")
+            c = input("Correo a Enviar mensajes: ")
+            d = input("Asunto: ")
+            e = input("Mensaje: ")
+            cybersendmail.email_spammer(a, b, c, d, e)
+
                     
 
         else:
