@@ -1,6 +1,6 @@
 # ANONDOOR
 
-Una herramienta basica dedicada al hacking, su especialidad es tener distintos scripts hechos Python que son de utilidad a la hora del hacking, esta en su fase de desarrollo, cualquier error o problema que tengas, hazlo saber.
+Una herramienta basica dedicada al hacking, su especialidad es tener distintos scripts hechos con Python que son de utilidad a la hora del hacking e ingenieria social, esta en su fase de desarrollo, cualquier error o problema que tengas, hazlo saber.
 
 ## Intrucciones 🚀
 
@@ -43,9 +43,9 @@ Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md
 
 ## Expresiones de Gratitud 🎁
 
-* Muchas Gracias Por probar esta herramienta 📢
+* Muchas Gracias Por probar esta herramienta 🤓
 
 
 
 ---
-⌨️ con ❤️ por [CyberPhantom](.) 😊
+⌨️ con mucho gusto por [CyberPhantom](.) 
