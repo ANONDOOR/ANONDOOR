@@ -16,6 +16,9 @@ sudo apt-get install python3
 sudo apt install python3-pip
 ```
 ```
+sudo pip3 install colorama
+```
+```
 sudo apt-get install wget
 ```
 ```
