@@ -3,9 +3,9 @@ import os
 import time
 import shutil
 import colorsys
-from source import ftp, iplogger, payload
+from source import ftp, iplogger, payload, cybersendmail, bruteforceEmail
 from colorama import Fore
-from source import cybersendmail
+
 
 def help():
         print("""
@@ -24,13 +24,15 @@ def help():
 
         payload (Crea un payload con msfvenom)
 
-        spammail (Usa esto para diversion, herramienta de spmam a Emails)
+        spammail (Usa esto para diversion, herramienta de spam a Emails)
+
+        brutemail (herramienta de fuerza bruta a Gmail)
 
         """)
 
-def menu():
+def menu(): 
     logo = Fore.CYAN + """
- ▄▄▄       ███▄    █  ▒█████   ███▄    █ ▓█████▄  ▒█████   ▒█████   ██▀███  
+  ▄▄▄       ███▄    █  ▒█████   ███▄    █ ▓█████▄  ▒█████   ▒█████   ██▀███  
 ▒████▄     ██ ▀█   █ ▒██▒  ██▒ ██ ▀█   █ ▒██▀ ██▌▒██▒  ██▒▒██▒  ██▒▓██ ▒ ██▒
 ▒██  ▀█▄  ▓██  ▀█ ██▒▒██░  ██▒▓██  ▀█ ██▒░██   █▌▒██░  ██▒▒██░  ██▒▓██ ░▄█ ▒
 ░██▄▄▄▄██ ▓██▒  ▐▌██▒▒██   ██░▓██▒  ▐▌██▒░▓█▄   ▌▒██   ██░▒██   ██░▒██▀▀█▄  
@@ -39,8 +41,7 @@ def menu():
   ▒   ▒▒ ░░ ░░   ░ ▒░  ░ ▒ ▒░ ░ ░░   ░ ▒░ ░ ▒  ▒   ░ ▒ ▒░   ░ ▒ ▒░   ░▒ ░ ▒░
   ░   ▒      ░   ░ ░ ░ ░ ░ ▒     ░   ░ ░  ░ ░  ░ ░ ░ ░ ▒  ░ ░ ░ ▒    ░░   ░ 
       ░  ░         ░     ░ ░           ░    ░        ░ ░      ░ ░     ░     
-                                          ░  Cyber Phantom                               
-""" + Fore.RESET
+                                          ░  Cyber Phantom                   """ + Fore.RESET
     
     os.system("clear")
     print(logo,"Plataforma: " + str(sys.platform), "\n Version de python: " + str(sys.version))
@@ -66,11 +67,25 @@ def menu():
         if f == "keylogger":
                 if os.path.exists(path="keylogger.py"):
                     os.remove(path="keylogger.py")
-                    shutil.copyfile(src="re242", dst=".. keylogger.py")
+                    time.sleep(1)
+                    os.system("cd source/")
+                    time.sleep(1)
+                    os.system("cp re242 ..")
+                    time.sleep(1)
+                    os.system("cd ..")
+                    time.sleep(1)
+                    os.system("mv re242 keylogger.py")
+                    time.sleep(1)
                     print("Keylogger reescrito correctamente")
                     sys.exit()
                 else:
-                    shutil.copyfile(src="re242", dst="keylogger.py")
+                    os.system("cd source/")
+                    time.sleep(1)
+                    os.system("cp re242 ..")
+                    time.sleep(1)
+                    os.system("cd ..")
+                    time.sleep(1)
+                    os.system("mv re242 keylogger.py")
                     print("Keylogger creado satisfactoriamente")
                     sys.exit()
         if f == "spammail":
@@ -80,6 +95,8 @@ def menu():
             d = input("Asunto: ")
             e = input("Mensaje: ")
             cybersendmail.email_spammer(a, b, c, d, e)
+        if f == "brutemail":
+            bruteforceEmail.brute()
 
                     
 
