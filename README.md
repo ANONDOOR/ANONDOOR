@@ -30,7 +30,7 @@ sudo apt-get install wget
 
 ## Construido con 🛠️
 
-* [Python3](https://www.python.org/) - Lenguaje de programacion usado
+* [Python](https://www.python.org/) - Lenguaje de programacion usado
 
 ## Wiki 📖
 
