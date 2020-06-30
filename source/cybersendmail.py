@@ -2,15 +2,11 @@ from colorama import Fore
 import smtplib
 import os
 import time
-try:
-    import sendmail
-except:
-    print("hubo un error al importar el modulo sendmail")
 
 # -*- coding: utf-8 -*-
 def email_spammer(emisor, password, receptor, asunto, mensaje):
     cantidad = int(input("Cantidad de mensajes a enviar: "))
-    numero = 0
+    numero = 1
     print("\npara cancelar el proceso: CTRL + Z\n")
     #asunto = "se te olvidaron las pastas"
     #mensaje = """Hola!<br/> <br/>
@@ -26,13 +22,17 @@ def email_spammer(emisor, password, receptor, asunto, mensaje):
 
     """ % (emisor, receptor, asunto, mensaje)
     while numero <= cantidad:
+        
         try:
             smtp = smtplib.SMTP('smtp.gmail.com', 587)
             smtp.starttls()
             smtp.login(emisor, password)
             smtp.sendmail(emisor, receptor, Email)
             smtp.quit()
-            print(Fore.RED + "[{0}]".format(numero) + Fore.RESET + "Correo Enviado") 
+            print(Fore.RED + "[{0}]".format(numero) + Fore.RESET + "Correo Enviado")
+            if numero >= cantidad:
+                print("\nsecuencia completada!\n")
+                time.sleep(5) 
         except:
             print("correo no enviado") 
             request = input("intentando instalar sendmail/verifica que la contraseña sea correcta, Desea continuar con la instalacion? S/n: ")
@@ -41,6 +41,8 @@ def email_spammer(emisor, password, receptor, asunto, mensaje):
                 os.system("sudo apt-get install sendmail")
             elif request == "n" or request == "N":
                 break
+            else:
+                break
         numero = numero + 1
-        if numero == cantidad:
-            print("\nsecuencia completada!\n")
+    
+        
