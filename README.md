@@ -48,7 +48,7 @@ Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](.)
 
 ## Licencia 📄
 
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
+Este proyecto está bajo la Licencia (ANONDOOR) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
 
 ## Expresiones de Gratitud 🎁
 
