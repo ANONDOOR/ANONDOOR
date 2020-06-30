@@ -27,6 +27,12 @@ sudo apt-get install sendmail
 ```
 sudo apt-get install wget
 ```
+```
+sudo apt-get install tar
+```
+```
+sudo apt-get install zip
+``
 
 ## Construido con 🛠️
 
