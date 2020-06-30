@@ -60,45 +60,45 @@ Selecciona el tipo de tunel:"""+ Fore.RED +"""
 
     1)AMD64(Linux 64 bits)[PC]
     2)AMD(Linux 32 bits)[PC]
-    3)ARM64(Linux 64 bits)[Android]
-    4)ARM(Linux 32 bits)[Android]
+    3)ARM64(Linux 64 bits)[Termux]
+    4)ARM(Linux 32 bits)[Termux]
     ~~>: """)
-    if seleccion1 == "1":
-        print("\nespera un minuto, esto puede tardar debido a tu conexion\n")
-        os.system("wget --no-check-certificate https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/null 2>&1")
-        os.system("unzip ngrok-stable-linux-amd64.zip > /dev/null 2>&1")
-        os.system("rm -rf ngrok-stable-linux-amd64.zip")
-        if os.path.exists("ngrok"):
-            os.system("chmod +x ngrok")
-            print("se ha descargado con exito!\nvuelve a entrar")
-            sys.exit()
-    if seleccion1 == "2":
-        print("\nespera un minuto, esto puede tardar debido a tu conexion\n")
-        os.system("wget --no-check-certificate https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip > /dev/null 2>&1")
-        os.system("unzip ngrok-stable-linux-386.zip > /dev/null 2>&1")
-        os.system("rm -rf ngrok-stable-linux-386.zip")
-        if os.path.exists("ngrok"):
-            os.system("chmod +x ngrok")
-            print("se ha descargado con exito!\nvuelve a entrar")
-            sys.exit()
-    if seleccion1 == "3":
-        print("\nespera un minuto, esto puede tardar debido a tu conexion\n")
-        os.system("wget --no-check-certificate https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm64.tgz > /dev/null 2>&1")
-        os.system("tar -xvf ngrok-stable-linux-arm64.tgz > /dev/null 2>&1")
-        os.system("rm -rf ngrok-stable-linux-arm64.tgz")
-        if os.path.exists("ngrok"):
-            os.system("chmod +x ngrok")
-            print("se ha descargado con exito!\nvuelve a entrar")
-            sys.exit()
-    if seleccion1 == "4":
-        print("\nespera un minuto, esto puede tardar debido a tu conexion\n")
-        os.system("wget --no-check-certificate https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip > /dev/null 2>&1")
-        os.system("unzip ngrok-stable-linux-arm.zip > /dev/null 2>&1")
-        os.system("rm -rf ngrok-stable-linux-arm.zip")
-        if os.path.exists("ngrok"):
-            os.system("chmod +x ngrok")
-            print("se ha descargado con exito!\nvuelve a entrar")
-            sys.exit()
+        if seleccion1 == "1":
+            print("\nespera un minuto, esto puede tardar debido a tu conexion\n")
+            os.system("wget --no-check-certificate https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/null 2>&1")
+            os.system("unzip ngrok-stable-linux-amd64.zip > /dev/null 2>&1")
+            os.system("rm -rf ngrok-stable-linux-amd64.zip")
+            if os.path.exists("ngrok"):
+                os.system("chmod +x ngrok")
+                print("se ha descargado con exito!\nvuelve a entrar")
+                sys.exit()
+        if seleccion1 == "2":
+            print("\nespera un minuto, esto puede tardar debido a tu conexion\n")
+            os.system("wget --no-check-certificate https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip > /dev/null 2>&1")
+            os.system("unzip ngrok-stable-linux-386.zip > /dev/null 2>&1")
+            os.system("rm -rf ngrok-stable-linux-386.zip")
+            if os.path.exists("ngrok"):
+                os.system("chmod +x ngrok")
+                print("se ha descargado con exito!\nvuelve a entrar")
+                sys.exit()
+        if seleccion1 == "3":
+            print("\nespera un minuto, esto puede tardar debido a tu conexion\n")
+            os.system("wget --no-check-certificate https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm64.tgz > /dev/null 2>&1")
+            os.system("tar -xvf ngrok-stable-linux-arm64.tgz > /dev/null 2>&1")
+            os.system("rm -rf ngrok-stable-linux-arm64.tgz")
+            if os.path.exists("ngrok"):
+                os.system("chmod +x ngrok")
+                print("se ha descargado con exito!\nvuelve a entrar")
+                sys.exit()
+        if seleccion1 == "4":
+            print("\nespera un minuto, esto puede tardar debido a tu conexion\n")
+            os.system("wget --no-check-certificate https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip > /dev/null 2>&1")
+            os.system("unzip ngrok-stable-linux-arm.zip > /dev/null 2>&1")
+            os.system("rm -rf ngrok-stable-linux-arm.zip")
+            if os.path.exists("ngrok"):
+                os.system("chmod +x ngrok")
+                print("se ha descargado con exito!\nvuelve a entrar")
+                sys.exit()
 
     
 
