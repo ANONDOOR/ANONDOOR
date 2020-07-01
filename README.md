@@ -22,9 +22,6 @@ sudo pip3 install colorama
 sudo apt-get install wget
 ```
 ```
-sudo apt-get install sendmail
-```
-```
 sudo apt-get install wget
 ```
 ```
