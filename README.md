@@ -37,7 +37,7 @@ sudo apt-get install zip
 
 ## Wiki 📖
 
-Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](.)
+Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki]()
 
 ## Autores ✒️
 
