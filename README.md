@@ -29,7 +29,7 @@ sudo apt-get install tar
 ```
 ```
 sudo apt-get install zip
-``
+```
 
 ## Construido con 🛠️
 
