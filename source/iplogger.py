@@ -64,6 +64,8 @@ Selecciona el tipo de tunel:"""+ Fore.RED +"""
     4)ARM(Linux 32 bits)[Termux]
     ~~>: """)
         if seleccion1 == "1":
+            if os.path.exists("ngrok"):
+                os.system("rm ngrok")
             print("\nespera un minuto, esto puede tardar debido a tu conexion\n")
             os.system("wget --no-check-certificate https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/null 2>&1")
             os.system("unzip ngrok-stable-linux-amd64.zip > /dev/null 2>&1")
@@ -73,6 +75,8 @@ Selecciona el tipo de tunel:"""+ Fore.RED +"""
                 print("se ha descargado con exito!\nvuelve a entrar")
                 sys.exit()
         if seleccion1 == "2":
+            if os.path.exists("ngrok"):
+                os.system("rm ngrok")
             print("\nespera un minuto, esto puede tardar debido a tu conexion\n")
             os.system("wget --no-check-certificate https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip > /dev/null 2>&1")
             os.system("unzip ngrok-stable-linux-386.zip > /dev/null 2>&1")
@@ -82,6 +86,8 @@ Selecciona el tipo de tunel:"""+ Fore.RED +"""
                 print("se ha descargado con exito!\nvuelve a entrar")
                 sys.exit()
         if seleccion1 == "3":
+            if os.path.exists("ngrok"):
+                os.system("rm ngrok")
             print("\nespera un minuto, esto puede tardar debido a tu conexion\n")
             os.system("wget --no-check-certificate https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm64.tgz > /dev/null 2>&1")
             os.system("tar -xvf ngrok-stable-linux-arm64.tgz > /dev/null 2>&1")
@@ -91,6 +97,8 @@ Selecciona el tipo de tunel:"""+ Fore.RED +"""
                 print("se ha descargado con exito!\nvuelve a entrar")
                 sys.exit()
         if seleccion1 == "4":
+            if os.path.exists("ngrok"):
+                os.system("rm ngrok")
             print("\nespera un minuto, esto puede tardar debido a tu conexion\n")
             os.system("wget --no-check-certificate https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip > /dev/null 2>&1")
             os.system("unzip ngrok-stable-linux-arm.zip > /dev/null 2>&1")
