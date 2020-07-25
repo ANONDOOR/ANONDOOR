@@ -4,7 +4,7 @@ import os
 import time
 
 # -*- coding: utf-8 -*-
-def email_spammer(emisor, password, receptor, asunto, mensaje):
+def email_spammer():
     cantidad = int(input("Cantidad de mensajes a enviar: "))
     numero = 1
     print("\npara cancelar el proceso: CTRL + Z\n")
@@ -45,4 +45,13 @@ def email_spammer(emisor, password, receptor, asunto, mensaje):
                 break
         numero = numero + 1
     
-        
+if __name__ == "__main__":
+    print("Intestas ejecutar esto fuera de ANONDOOR?") 
+else:
+    emisor = input(Fore.RESET + "Ingresa tu correo: ")
+    password = input("Ingresa tu contraseña: ")
+    receptor = input("Correo a Enviar mensajes: ")
+    asunto = input("Asunto: ")
+    mensaje = input("Mensaje: ")
+    email_spammer()
+  
