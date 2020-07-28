@@ -3,6 +3,7 @@ import time
 import subprocess
 import os
 import sys
+import datetime
 from colorama import Fore
 def ip():
     
@@ -162,4 +163,9 @@ Selecciona el tipo de tunel:"""+ Fore.RED +"""
 
         conexion.sendall(bytes(http_response,'utf-8'))
         conexion.close()
+
+
+        a = open('IP.txt','a+')
+
+        a.write(str(request.decode('utf-8')))
 
