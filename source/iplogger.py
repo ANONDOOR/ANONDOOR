@@ -5,6 +5,7 @@ import os
 import sys
 import datetime
 from colorama import Fore
+
 def ip():
     
     seleccion = str(input("""
@@ -142,7 +143,7 @@ Selecciona el tipo de tunel:"""+ Fore.RED +"""
 
     if seleccion == "04" or seleccion == "4":
         os.system("\nps\n")
-        seleccion2 = str(input(Fore.RESET + "\nPonga a qui el numero de proceso a cerrar: \n"))
+        seleccion2 = str(input(Fore.RESET + "\nPonga aqui el numero de proceso a cerrar: \n"))
         if seleccion2 == "":
             print("Ponga un caracter valido")
         else:
