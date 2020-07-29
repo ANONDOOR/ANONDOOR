@@ -178,8 +178,11 @@ Selecciona el tipo de tunel:"""+ Fore.RED +"""
         a.write(str(request.decode('utf-8')))
         c = open('IP1.txt','w')
         c.write(str(request.decode('utf-8')))
+        t = open('Agent.txt','w')
+        t.write(str(request.decode('utf-8')))
         if os.path.exists("IP.txt"):
             grep = os.system("grep -i [0-9][0-9][0-9].[0-9][0-9[0-9] IP1.txt | awk '{ print $2}' > IP2.txt")
+            grep1 = os.system("grep -i User-Agent Agent.txt | awk '{ print $2 $3 $4 $5 $6 $7 $8 $9 $10 $11 $12 $13 $14 $15 $16 }' > IP3.txt")
             from source import iptracker
             x = open('IP2.txt', 'r')
             b = x.readlines()
