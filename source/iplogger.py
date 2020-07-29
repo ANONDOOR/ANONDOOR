@@ -4,6 +4,9 @@ import subprocess
 import os
 import sys
 import datetime
+import urllib3
+import json
+import requests
 from colorama import Fore
 
 def ip():
@@ -150,7 +153,12 @@ Selecciona el tipo de tunel:"""+ Fore.RED +"""
             os.system("kill {}".format(seleccion2))
             print("Si no aparece ningun error, aparentemente el proceso se cerro :)")
             os.sys.exit()
+
+            
     while True:
+
+        secuencia = 0
+
         conexion, addr = listen_socket.accept() 
         print("\n[*]IP Logged!" + (str(addr)))
         request = conexion.recv(1024)
@@ -167,6 +175,28 @@ Selecciona el tipo de tunel:"""+ Fore.RED +"""
 
 
         a = open('IP.txt','a+')
-
         a.write(str(request.decode('utf-8')))
+        c = open('IP1.txt','w')
+        c.write(str(request.decode('utf-8')))
+        if os.path.exists("IP.txt"):
+            grep = os.system("grep -i [0-9][0-9][0-9].[0-9][0-9[0-9] IP1.txt | awk '{ print $2}' > IP2.txt")
+            from source import iptracker
+            x = open('IP2.txt', 'r')
+            b = x.readlines()
+            for linea in b:
+                
+                if secuencia == 0: 
+                    secuencia = 1
+                else:
+                    iptracker.iptracker("{0}".format(linea))
+                    secuencia = 0
+                    break
+
+
+        
+
+        
+            
+
+        
 
