@@ -98,6 +98,7 @@ def menu():
 
     except KeyboardInterrupt:
         print(Fore.CYAN + "\n\nNos " + Fore.GREEN + "vemos " + Fore.YELLOW +"pronto! :)\n" + Fore.RESET)
+        os.system("rm IP2.txt IP1.txt")
         sys.exit()
 
 def help():
