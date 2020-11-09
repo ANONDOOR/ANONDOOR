@@ -2,6 +2,7 @@ import sys
 import os
 import time
 import colorsys
+from tabulate import tabulate
 from source import ftp, iplogger, bruteforceEmail
 from colorama import Fore
 
@@ -28,7 +29,7 @@ def menu():
             if f == "exit" or f == "salir":
                 print(Fore.RESET)
                 sys.exit()
-            if f == "-h" or f == "--help":
+            if f == "help":
                 help()
                 break
                 
@@ -87,7 +88,13 @@ def menu():
                     from source import reverse
                 else:
                     print(Fore.RED + "\nPor favor, de una respuesta valida\n")
-                    
+
+            if f == "phishing":
+                from source import phishing
+            if f == "dos":
+                from source import dos
+            if f == "scan":
+                from source import scan
             else:
                 if f == "":
                     return Fore.YELLOW + str(menu())
@@ -102,30 +109,20 @@ def menu():
         sys.exit()
 
 def help():
-    print( Fore.WHITE + """
---------------------------------------------------------------------------
-#        exit (salir)                                                    «
-#                                                                        «
-#        salir (salir)                                                   «
-#                                                                        «
-#        -h --help (ayuda)                                               «
-#                                                                        «
-#        cyberftp (Conectarse Via FTP a un HOST)                         «
-#                                                                        «
-#        keylogger (crea un keylogger escrito en python)                 «
-#                                                                        «
-#        iplogger (Ejecuta un iplogger escrito en python)                «
-#                                                                        «
-#        payload (Crea un payload con msfvenom)                          «                                                                                           
-#                                                                        «                                                                                           
-#        spammail (Usa esto para diversion, herramienta de spam a Emails)«                                                                                           
-#                                                                        «                                                                                           
-#        brutemail (herramienta de fuerza bruta a Gmail)                 «                                                                                           
-#                                                                        «                                                                                           
-#        reverse (escuchar  y crear reverse shell hecha en python)       «                                                                                           
---------------------------------------------------------------------------                                                                                           
-                                                                                                                                                                     
-        """ + Fore.RESET)
+    tabla = [
+    ['help','ayuda'],
+    ['cyberftp','Conectarse Via FTP a un HOST'],                 
+    ['keylogger','Crear keylogger escrito en python'],
+    ['iplogger','Ejecuta un iplogger escrito en python'],
+    ['payload','Crea un payload con msfvenom'],                                                                                                                     
+    ['spammail','Herramienta de spam a Emails'],
+    ['brutemail','Herramienta de Fuerza Bruta a Gmail'],                                                                                                           
+    ['reverse','Escuchar  y crear Shell de Reversa hecha en python'],
+    ['phishing','Herramienta de phishing a redes sociales'],
+    ['dos','Herramienta de Denegacion de Servicios'],
+    ['scan','Escanear puertos de un Host.']                                                                                             
+    ]
+    print(tabulate(tabla, tablefmt="fancy_grid"))
         
 
 if __name__ == "__main__":
